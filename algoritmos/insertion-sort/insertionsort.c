@@ -26,7 +26,7 @@ void insertion_sort(char *arr) {
     }
 }
 
-
+// chamando funcao principal
 int main () {
     
     char rgm[9]; // 8 digitos + caractere nulo
@@ -49,3 +49,4 @@ int main () {
     return 0;
 
 }
+
