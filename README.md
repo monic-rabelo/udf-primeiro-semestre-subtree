@@ -1,6 +1,6 @@
 # Visão geral
 
-Repositório criado para exemplificar o uso de subtree no git, usando de exemplo a matéria algoritmos. Foi uma opção usada para que pudesse "passar" um repositório original para outro repositório  mantendo os commits e organizando os projetos em diretórios.
+Repositório criado para exemplificar o uso de subtree no git, usando de exemplo a matéria algoritmos. Foi uma opção usada para que fosse possível importar um repositório original para outro repositório, mantendo os commits, centralizando os projetos em um só repositório e organizando os projetos em diretórios.
 
 * **Diretórios: pastas**
 
@@ -26,7 +26,7 @@ O método subtree em Git se trata de uma estratégia de merge (combinar o histó
 É um método usado caso você queira importar um repositório para dentro de outro, buscando organizar projetos com dependências entre eles. O git subtree foi utilizado nesse repositório para praticar e demonstrar maneiras diferentes de relacionar projetos entre si. <br>
 <br>
 Quando você altera algo no repositório original (que virou um subdiretório no repositório com subtree), é possível fazer `pull` e `push` dos arquivos do repositório original para o arquivo da subtree.<br>
-* O subtree pega os commits do repositório original e importa eles para o repositório subtree. É possível fazer que esses commits originals se tornem um só na subtree, usando o `--squash`, mas também é possível que sem o `--squash` mostre todos os commits individualmente.
+* A subtree pega os commits do repositório original e importa eles para o repositório subtree. É possível fazer que esses commits originals se tornem um só na subtree, usando o `--squash`, mas também é possível que sem o `--squash` mostre todos os commits individualmente.
 
 ---
 
@@ -78,6 +78,7 @@ git subtree push --prefix=algoritmos/gerenciamento-alunos https://github.com/mon
 
 * É importante ficar atento para a ordem dos comandos, também prestando na criação dos diretórios e subdiretórios, qual é o repositório original e qual será a subtree.
 * Esse repositório é apenas um teste, qualquer erro nos conceitos ou ordens de comando fique a vontade de sugerir correções.
+
 
 
 
