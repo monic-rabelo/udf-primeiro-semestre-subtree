@@ -26,19 +26,19 @@ O método subtree em Git se trata de uma estratégia de merge (combinar o histó
 É um método usado caso você queira importar um repositório para dentro de outro, buscando organizar projetos com dependências entre eles. O git subtree foi utilizado nesse repositório para praticar e demonstrar maneiras diferentes de relacionar projetos entre si. <br>
 <br>
 Quando você altera algo no repositório original (que virou um subdiretório no repositório com subtree), é possível fazer `pull` e `push` dos arquivos do repositório original para o arquivo da subtree.<br>
-* A subtree pega os commits do repositório original e importa eles para o repositório subtree. É possível fazer que esses commits originals se tornem um só na subtree, usando o `--squash`, mas também é possível que sem o `--squash` mostre todos os commits individualmente.
+* A subtree pega os commits do repositório original e importa eles para o repositório subtree. É possível fazer que esses commits originais se tornem um só na subtree, usando o `--squash`, mas também é possível que sem o `--squash` mostre todos os commits individualmente.
 
 ---
 
 ### Como foi aplicado
-As pastas **calculadora científica, gerenciamento de alunos com struct e insertion sort** foram integradas no repositório com o uso de `git subtree add`. Com o subtree **insertion sort**, especificamente, sem o uso de `--squash`, para que mostre os commits detalhadamente.
+As pastas **calculadora científica, gerenciamento de alunos com struct e insertion sort** foram integradas no repositório com o uso de `git subtree add`. Com a subtree **insertion sort**, especificamente, sem o uso de `--squash`, para que mostre os commits detalhadamente.
 
 * Repositório precisa ser clonado na máquina com `git clone`
 * Os comandos devem ser aplicados na **raiz** do repositório, exemplo:  `~/Documentos/udf-primeiro-semestre-subtree`
 * É possível fazer a adição da subtree usando um remote (nome curto) ou a URL direta.
-* --prefix=algoritmos/calculadora significa que o git criará uma pasta chamada "calculadora" dentro da pasta "algoritmos" e colocará o conteúdo lá. A ordem é o diretório/subdiretório, importante colocar "/" para indicar que após o primeiro diretório terá um subdiretório.
+* `--prefix=algoritmos/calculadora` significa que o git criará uma pasta chamada "calculadora" dentro da pasta "algoritmos" e colocará o conteúdo lá. A ordem é o diretório/subdiretório, importante colocar "/" para indicar que após o primeiro diretório terá um subdiretório.
 
-Exemplo: Adicionar o projeto original **gerenciamento com struct** dentro do repositório com subtree **udf-primeiro-semestre**: o subdiretório "gerenciamento-alunos-com-struct-com-struct" dentro do diretório "algoritmos"
+Exemplo: Adicionar o projeto original **gerenciamento com struct** dentro do repositório com subtree **udf-primeiro-semestre**: o subdiretório "gerenciamento-alunos-com-struct" dentro do diretório "algoritmos"
 
 ```bash
 // adicionando subtree com remote
@@ -66,10 +66,10 @@ git push
 
 ```bash
 // enviando alterações da subtree para o repositório original com remote
-git subtree push --prefix=algoritmos/gerenciamento-alunos alunos-remote main
+git subtree push --prefix=algoritmos/gerenciamento-alunos-com-struct alunos-remote main
 
 // enviando alterações da subtree para o repositório original com url
-git subtree push --prefix=algoritmos/gerenciamento-alunos https://github.com/monic-rabelo/gerenciamento-alunos-com-struct.git main
+git subtree push --prefix=algoritmos/gerenciamento-alunos-com-struct https://github.com/monic-rabelo/gerenciamento-alunos-com-struct.git main
 ```
 * É muito importante sempre estar atento se, caso você faça alguma mudança no site GitHub, sempre fazer um pull no arquivo que você está editando e usando o terminal localmente, para os comandos funcionarem sem problemas. É melhor alterar os arquivos sempre no IDE de preferência, para que não hajam conflitos.
 ---
