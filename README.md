@@ -20,7 +20,7 @@ Repositório criado para exemplificar o uso de subtree no git, usando de exemplo
 ---
 
 ## Subtree
-### Conceito e o porquê foi usado
+### Conceito
 
 O método subtree em Git se trata de uma estratégia de merge (combinar o histórico de commits de duas branches diferentes, integrando as alterações de uma para a outra) aplicado a um diretório específico, fazendo com que um repositório original seja aplicado dentro de outro repositório como um subdiretório. <br>
 É um método usado caso você queira importar um repositório para dentro de outro, buscando organizar projetos com dependências entre eles. O git subtree foi utilizado nesse repositório para praticar e demonstrar maneiras diferentes de relacionar projetos entre si. <br>
@@ -78,5 +78,6 @@ git subtree push --prefix=algoritmos/gerenciamento-alunos https://github.com/mon
 
 * É importante ficar atento para a ordem dos comandos, também prestando na criação dos diretórios e subdiretórios, qual é o repositório original e qual será a subtree.
 * Esse repositório é apenas um teste, qualquer erro nos conceitos ou ordens de comando fique a vontade de sugerir correções.
+
 
 
